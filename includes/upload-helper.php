@@ -47,3 +47,4 @@ if(isset($_POST['prof-submit'])){
     header("Location: ../profile.php");
     exit();
 }
+ 

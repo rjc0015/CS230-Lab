@@ -33,7 +33,7 @@ require "includes/header.php"
 
                 <label for="inputPassword" class="sr-only">Confirm Password</label>
                 <input type="password" id="inputPassword" class="form-control" name="con-pwd" placeholder="Confirm Password" required>
-                
+                 
 
                 
                 <button class="btn btn-lg btn-outline-danger btn-block" name="signup-submit" type="submit">Register</button>

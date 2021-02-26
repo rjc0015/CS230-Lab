@@ -24,7 +24,7 @@ require "includes/dbhandler.php";
     }
     </script>
 
-    <?php
+    <?php 
  if(isset($_SESSION['uid'])){
     $prof_user = $_SESSION['uname'];
     $sqlpro =  "SELECT * FROM profiles WHERE uname='$prof_user';";
