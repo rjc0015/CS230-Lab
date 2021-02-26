@@ -1,0 +1,22 @@
+.center-me{
+    display:flex;
+    justify-content:right;
+    padding: 50px;
+    text-align:"center";
+
+
+}
+
+#prof-display{
+    display:flex;
+    width: 145px;
+    margin: 15px auto;
+    border-radius: 50%;
+
+}
+
+#uname-style{
+    font-size:22px;
+    font-family:"Calibre";
+    font-weight: bold;
+}
