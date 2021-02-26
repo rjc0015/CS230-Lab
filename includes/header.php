@@ -41,6 +41,7 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.php">Gallery</a>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item">
                     <a class="nav-link" href="profile.php">Profile</a>
                 </li>';
@@ -52,6 +53,20 @@ session_start();
                 }
                 ?>
                 <li class="nav-item">
+=======
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Profile</a>
+                </li>';
+                }
+                else{
+                    echo '<li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>';
+                }
+
+                ?>
+                <li class="nav-item">
+>>>>>>> 17362cfae03e27b5e83ccc7f1ac0aa254c94ca2a
                     <a class="nav-link" href="../index.php">Home<span class="sr-only">(current)</span>"</a>
                 </li>'
                 <li class="nav-item">
@@ -63,7 +78,11 @@ session_start();
     </nav>
 </header>
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 17362cfae03e27b5e83ccc7f1ac0aa254c94ca2a
 <!-- <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>

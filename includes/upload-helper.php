@@ -47,4 +47,7 @@ if(isset($_POST['prof-submit'])){
     header("Location: ../profile.php");
     exit();
 }
+<<<<<<< HEAD
  
+=======
+>>>>>>> 17362cfae03e27b5e83ccc7f1ac0aa254c94ca2a
