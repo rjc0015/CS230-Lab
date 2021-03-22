@@ -27,9 +27,13 @@ require "includes/dbhandler.php";
     <?php 
  if(isset($_SESSION['uid'])){
     $prof_user = $_SESSION['uname'];
-    $sqlpro =  "SELECT * FROM profiles WHERE uname='$prof_user';";
+    $sqlpro =  "SELECT * FROM profiles WHERE username='$prof_user'";
     $res = mysqli_query($conn, $sqlpro);
     $row = mysqli_fetch_array($res);
+    if (!$res) {
+        printf("Error: %s\n", mysqli_error($conn));
+        exit();
+    }
     $photo = $row['profpic'];
  
     ?>
@@ -41,14 +45,14 @@ require "includes/dbhandler.php";
                     <img src="<?php echo $photo;?>" alt="profile pic" onclick="triggered();" id="prof-display">
                     <label for="prof-image" id="uname-style">"<?php echo $prof_user?></label>
                     <input type="file" name="prof-image" id="prof-image" onchange="preview(this)" class="form-control"
-                        style="display:none">
+                        style="display:none;">
                 </div>
                 <div class="form-group">
                     <textarea name="bio" id="bio" cols="30" rows="10" placeholder="bio..."
                         style="text-align:center;"></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit" name="prof-submit" class="btn btn-outline-success">upload</button>
+                    <button type="submit" name="prof-submit" class="btn btn-outline-success btn-lg btn-block">upload</button>
                 </div>
             </form>
         </div>

@@ -6,7 +6,6 @@ define('KB',1024);
 define('MB',1048576);
 
 if(isset($_POST['prof-submit'])){
-    require 'dbhandler.php';
 
     $uname = $_SESSION['uname'];
     $file = $_FILES['prof-image'];
@@ -20,10 +19,10 @@ if(isset($_POST['prof-submit'])){
 
     $allowed = array('jpg','jpeg','png','svg');
 
-    if($file_error!==0){
+     if($file_error!==0){
         header("Location: ../profile.php?error=UploadError");
-        exit();
-    }
+         exit();
+     }
     if(!in_array($ext,$allowed)){
         header("Location: ../profile.php?error=InvalidType");
         exit();
@@ -36,7 +35,7 @@ if(isset($_POST['prof-submit'])){
         $new_name= uniqid('',true).".".$ext;
         $destination = '../profiles/'.$new_name;
 
-        $sql = "UPDATE profiles SET profpic='$destination' WHERE uname='$uname'";
+        $sql = "UPDATE profiles SET profpic='$destination' WHERE username='$uname'";
         mysqli_query($conn, $sql);
 
         move_uploaded_file($file_tmp_name,$destination);
@@ -47,7 +46,3 @@ if(isset($_POST['prof-submit'])){
     header("Location: ../profile.php");
     exit();
 }
-<<<<<<< HEAD
- 
-=======
->>>>>>> 17362cfae03e27b5e83ccc7f1ac0aa254c94ca2a

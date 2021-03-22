@@ -1,0 +1,46 @@
+h1{
+    text-align: center
+}
+
+h3{
+    color: gold
+}
+
+
+p{
+    color:brown
+}
+
+img{
+max-width:200px;
+height:200px;
+margin-top:15px;
+}
+
+.gallery-container{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.card{
+    border-radius: 12px;
+    margin:15px;
+    width:25%;
+
+max-width:200px;
+height:auto;
+padding:5px
+}
+
+a{
+    background-color: gold;
+    background-position: center;
+    background-size:cover;
+}
+
+a:hover{
+    opacity:70%;
+    text-decoration-color:maroon;
+}
